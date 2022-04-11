@@ -27,7 +27,7 @@
     </div>
     <div class="site-info">
       <p>
-        <i class="icon icon-copyright"></i>2020-2021
+        <i class="icon icon-copyright"></i>2020-2022
         <i class="icon icon-heart"></i>
         {{ $config.title }}
       </p>
