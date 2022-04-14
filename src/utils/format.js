@@ -11,11 +11,24 @@ export const formatPost = (post) => {
   const { body, created_at } = post
   const result = regex.exec(body)
   const cover = coverRegex.exec(result[1])
-  post.cover = {
-    title: cover[1] || 'defaultCover',
-    src: cover[2] || config.defaultCover,
+  // post.cover = {
+  //   title: cover[1] || 'defaultCover',
+  //   src: cover[2] || config.defaultCover,
+  // }
+  // post.description = result[2]
+  if (cover && cover.length === 3) {
+    post.cover = {
+      title: cover[1],
+      src: cover[2],
+    }
+    post.description = result[2]
+  } else {
+    post.cover = {
+      title: '',
+      src: config.defaultCover,
+    }
+    post.description = result[1]
   }
-  post.description = result[2]
   post.created_at = format(created_at, 'zh_CN').replace(/\s/, '')
   return post
 }

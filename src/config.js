@@ -30,11 +30,12 @@ export default {
    */
   gitalk: {
     clientID: '236ed4e615524ddd6901', //864b1c2cbc4e4aad9ed8
-    clientSecret: 'c92f6736e728d0cd7622ff4c142b67e309f753e4', //6ca16373efa03347e11a96ff92e355c5cea189bb
-    repo: 'comment', // 评论仓库地址
+    clientSecret: 'ce75e90a23bc75f3ab4574414cd4fde26fd83113', //6ca16373efa03347e11a96ff92e355c5cea189bb
+    repo: 'comment', // 评论仓库地址   //c92f6736e728d0cd7622ff4c142b67e309f753e4
     owner: 'GhostAdults',
     admin: ['GhostAdults'],
     distractionFreeMode: true, // 是否开始无干扰模式【背景遮罩】
+    proxy: 'https://bokegitalkcors.herokuapp.com/https://github.com/login/oauth/access_token',
   },
 
   /**
