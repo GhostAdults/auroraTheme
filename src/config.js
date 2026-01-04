@@ -15,7 +15,7 @@ export default {
   /**
    * 站点标题
    */
-  title: '时の雨',
+  title: '时之雨',
   subtitle: '下沉的世界 溯流而上',
 
   /**
