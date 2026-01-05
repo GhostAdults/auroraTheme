@@ -4,8 +4,10 @@ export default {
   preview: {
     touhou: 'https://cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/touhou.png',
     school: 'https://cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/school.jpg',
+    pure: 'https://cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/pure.png',
   },
   bg: {
+    pure: [],
     touhou: [
       'https://i0.hdslb.com/bfs/article/b7f5dbc8044f9c36eba8073103dfb6fd58163fb7.png',
       'https://i0.hdslb.com/bfs/album/fb0126be1fb4c7d3aeeedff1fa187087afda711a.jpg',

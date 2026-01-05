@@ -16,6 +16,12 @@
         </div>
       </div>
     </li>
+    <li :class="['pure', theme === 'pure' && 'active']" @click="switchTheme('pure')">
+      <h3>纯简</h3>
+      <div class="preview cursor">
+        <div class="pure-bg"></div>
+      </div>
+    </li>
   </ul>
 </template>
 
@@ -100,6 +106,17 @@ export default {
     img {
       width: 212px;
       height: 110px;
+    }
+  }
+  .pure {
+    .pure-bg {
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      background-image: linear-gradient(#ccc 1px, transparent 1px),
+        linear-gradient(90deg, #ccc 1px, transparent 1px);
+      background-size: 20px 20px;
+      background-position: center top;
     }
   }
 

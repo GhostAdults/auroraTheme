@@ -39,8 +39,13 @@ export const formatPost = (post) => {
 export const formatCategory = (category) => {
   category.forEach((o) => {
     const description = o.description.split('\r\n')
-    o.summary = description[0].split('summary:')[1]
-    o.cover = description[1].split('cover:')[1]
+    if (description.length > 1) {
+      o.summary = description[0].split('summary:')[1]
+      o.cover = description[1].split('cover:')[1]
+    } else {
+      o.summary = o.description
+      o.cover = ''
+    }
   })
   return category
 }

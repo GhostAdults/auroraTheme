@@ -136,12 +136,31 @@ export default {
     setTheme(theme) {
       this.theme = theme
       localSave('theme', theme)
-      window.$('#bg').backstretch(bg[theme], {
-        duration: 10000,
-        alignY: 0,
-        transition: 'fade',
-        transitionDuration: 1000,
-      })
+      const $bg = window.$('#bg')
+      const $app = window.$('#app')
+      if (theme === 'pure') {
+        $bg.backstretch('destroy', false)
+        $bg.css({
+          'background-color': '#fff',
+          'background-image':
+            'linear-gradient(#ccc 1px, transparent 1px), linear-gradient(90deg, #ccc 1px, transparent 1px)',
+          'background-size': '20px 20px',
+          'background-position': 'center top',
+          'background-repeat': 'repeat',
+        })
+        $app.css({
+          'background-color': 'rgba(255, 255, 255, 0.3)',
+        })
+      } else {
+        $bg.attr('style', '')
+        $app.attr('style', '')
+        $bg.backstretch(bg[theme], {
+          duration: 10000,
+          alignY: 0,
+          transition: 'fade',
+          transitionDuration: 1000,
+        })
+      }
     },
     // 关闭面板
     hidePanel() {
