@@ -84,8 +84,11 @@ export default {
   }),
   mounted() {
     if (!this.$isMobile.value) {
-      this.dressup()
-      this.loopTips()
+      this.showWaifu = true
+      this.$nextTick(() => {
+        this.dressup()
+        this.loopTips()
+      })
     }
   },
   methods: {

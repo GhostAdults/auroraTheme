@@ -114,8 +114,8 @@ export default {
     enableComment: true,
     qoute: '下沉的世界，溯流而上',
     avatar: '//cdn.jsdelivr.net/gh/GhostAdults/blog-cdn/icon/avatar.jpg',
-    graduated: 'College of Information Vocational Technology of ShanDong (CIVTS)',
-    college: 'Big Data&Software Technology',
+    graduated: '--',
+    college: '--',
     contact: [
       {
         icon: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/email.png',
